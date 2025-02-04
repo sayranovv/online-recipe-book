@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   css: ["@/assets/main.css"],
-
+  vite: {
+    server: {
+      hmr: true,
+    },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",

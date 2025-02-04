@@ -11,7 +11,7 @@ import RecommendationSliderItem from "~/components/catalog-slider/Recommendation
 </script>
 
 <template>
-  <div>
+  <div class="p-7">
     <div class="flex justify-between items-end">
       <div>
         <p class="opacity-50">Good Morning</p>
