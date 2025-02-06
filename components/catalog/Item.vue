@@ -8,8 +8,8 @@ const prop = defineProps<{
 </script>
 
 <template>
-  <div class="w-2/3 h-full">
-    <div class="w-full h-2/3">
+  <div class="h-full">
+    <div class="">
       <img :src="prop.dishImage" alt="greek salad" class="rounded-xl object-cover h-full" />
     </div>
     <div class="mt-3">

@@ -2,13 +2,10 @@
 import { Input } from '@/components/ui/input'
 import { Search, SlidersHorizontal } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
-import PizzaImg from '@/assets/img/pizza.png'
-import LemonsImg from '@/assets/img/lemons.png'
-import PastaCarbonara from '@/assets/img/pasta carbonara.jpg'
 </script>
 
 <template>
-  <div class="p-7 h-full flex flex-col justify-between">
+  <div class="p-7 h-full flex flex-col justify-between h-[100dvh]">
     <div class="h-full min-h-[750px]">
       <div class="h-1/3">
         <div class="flex justify-between items-end">
@@ -37,19 +34,12 @@ import PastaCarbonara from '@/assets/img/pasta carbonara.jpg'
           </Button>
         </div>
         <div class="flex gap-3 mt-5">
-          <StoriesItem title="Homemade Pizza" :img="PizzaImg" type="round" />
-          <StoriesItem title="Lemon Fresh" :img="LemonsImg" />
+          <StoriesSlider />
         </div>
       </div>
       <div class="mt-5 h-2/3">
         <h2 class="text-xl font-bold">Recommendation</h2>
-        <CatalogItem
-          class="mt-3"
-          dish-name="Pasta Carbonara"
-          :dish-image="PastaCarbonara"
-          dish-amount-of-ingredients="6"
-          dish-time-for-cooking="40 min"
-        />
+        <CatalogSlider class="mt-3" />
       </div>
     </div>
     <div class="text-center">
