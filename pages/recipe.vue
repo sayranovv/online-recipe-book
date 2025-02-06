@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RecipeInfo from "~/components/RecipeInfo.vue";
+import RecipeInfo from '~/components/RecipeInfo.vue'
 </script>
 
 <template>
@@ -33,13 +33,11 @@ import RecipeInfo from "~/components/RecipeInfo.vue";
       <div class="mt-8">
         <h2 class="text-2xl font-bold">Cooking instruction</h2>
         <div class="bg-teal-50 p-5 rounded-3xl mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
-          consequuntur cupiditate, dignissimos eaque tempore voluptates? Ad
-          consequatur, exercitationem inventore labore laboriosam non officia
-          perferendis praesentium quam quasi soluta temporibus voluptate
-          voluptates. Accusamus at commodi dolores, esse excepturi facere fugiat
-          in iure iusto laborum nobis numquam perferendis repellat sed vel,
-          voluptate.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur cupiditate,
+          dignissimos eaque tempore voluptates? Ad consequatur, exercitationem inventore labore
+          laboriosam non officia perferendis praesentium quam quasi soluta temporibus voluptate
+          voluptates. Accusamus at commodi dolores, esse excepturi facere fugiat in iure iusto
+          laborum nobis numquam perferendis repellat sed vel, voluptate.
         </div>
       </div>
     </div>

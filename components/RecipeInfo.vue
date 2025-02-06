@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { Clock, Flame, ConciergeBell } from "lucide-vue-next";
+import { Clock, Flame, ConciergeBell } from 'lucide-vue-next'
 
 const prop = defineProps<{
-  recipeName: string;
-  amountOfIngredients: number;
-  timeForPreparing: string;
-  amountOfCalories: number;
-  amountOfServe: number;
-}>();
+  recipeName: string
+  amountOfIngredients: number
+  timeForPreparing: string
+  amountOfCalories: number
+  amountOfServe: number
+}>()
 </script>
 
 <template>
