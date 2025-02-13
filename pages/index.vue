@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <div class="p-7 h-full flex flex-col justify-between h-[100dvh]">
+  <div class="p-7 h-full flex flex-col justify-between">
     <div class="h-full min-h-[750px]">
       <div class="h-1/3">
         <div class="flex justify-between items-end">

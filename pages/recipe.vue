@@ -4,19 +4,21 @@ import { ChevronLeft, Heart } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div>
+  <div class="relative">
     <img
       src="@/assets/img/greek%20salad.jpg"
       alt=""
       class="relative h-[50dvh] w-full object-cover rounded-[55px]"
     />
-    <div class="w-10/12 flex justify-between absolute left-1/2 -translate-x-1/2 top-10">
-      <Button class="bg-opacity-20 backdrop-blur-sm w-12 h-12 shadow-none">
-        <ChevronLeft class="!h-7 !w-7" />
-      </Button>
-      <Button class="bg-opacity-20 backdrop-blur-sm w-12 h-12 shadow-none"
-        ><Heart class="!h-7 !w-7"
-      /></Button>
+    <div class="w-10/12 mx-auto absolute left-1/2 -translate-x-1/2 top-10">
+      <div class="flex justify-between">
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none">
+          <ChevronLeft class="!h-8 !w-8" />
+        </Button>
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none"
+          ><Heart class="!h-8 !w-8"
+        /></Button>
+      </div>
     </div>
     <div class="sticky top-20 z-10">
       <RecipeInfo
