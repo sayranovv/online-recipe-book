@@ -7,6 +7,10 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '~/components/ui/carousel'
+
+defineProps<{
+  ingredients: string[]
+}>()
 </script>
 
 <template>
@@ -18,9 +22,15 @@ import {
       }"
     >
       <CarouselContent>
-        <CarouselItem v-for="(_, index) in 10" :key="index" class="basis-36">
+        <CarouselItem v-for="ingredient in ingredients" :key="ingredient" class="basis-36">
           <div class="h-full">
-            <IngredientsItem />
+            <div>
+              <div class="w-32 h-32 bg-gray-50 px-3 flex items-center rounded-xl drop-shadow-sm">
+                <img src="@/assets/img/lemons.png" alt="lemons" class="drop-shadow-lg" />
+              </div>
+              <p class="font-semibold text-lg mt-2">{{ ingredient }}</p>
+              <p class="text-md opacity-50">1 item</p>
+            </div>
           </div>
         </CarouselItem>
       </CarouselContent>
