@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 <template>
   <div class="p-7 h-full flex flex-col justify-between">
-    <div class="h-full min-h-[750px]">
+    <div class="h-full min-h-[850px]">
       <div class="h-1/3">
         <div class="flex justify-between items-end">
           <div>
@@ -27,7 +27,7 @@ import { Button } from '@/components/ui/button'
               <Search class="size-6 text-muted-foreground" />
             </span>
           </div>
-          <Button class="bg-teal-700 h-full w-16 rounded-lg">
+          <Button class="bg-amber-500 h-full w-16 rounded-lg">
             <div>
               <SlidersHorizontal class="!h-6 !w-6" />
             </div>

@@ -22,7 +22,9 @@ import { Label } from '~/components/ui/label'
 import { Plus } from 'lucide-vue-next'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-import { h } from 'vue'
+import { h, ref } from 'vue'
+
+const amountOfOwnRecipeIngredients = ref(3)
 
 const formSchema = toTypedSchema(
   z.object({
@@ -40,19 +42,21 @@ const onSubmit = (values: any) => {
     )
   })
 }
+
+const onClickPlus = () => {
+  amountOfOwnRecipeIngredients.value += 1
+}
 </script>
 
 <template>
   <Form v-slot="{ handleSubmit }" as="" keep-values :validation-schema="formSchema">
     <Dialog>
       <DialogTrigger as-child>
-        <Button class="bg-teal-700 h-full rounded-lg w-24">
+        <Button class="bg-amber-500 h-full rounded-lg w-24">
           <Plus class="!h-6 !w-6" />
         </Button>
       </DialogTrigger>
-      <DialogContent
-        class="sm:max-w-sm grid-rows-[auto_minmax(0,1fr)_auto] p-0 max-h-[90dvh] sm:max-h-[80dvh]"
-      >
+      <DialogContent class="grid-rows-[auto_minmax(0,1fr)_auto] p-0 h-screen mobile-l:h-[90dvh]">
         <DialogHeader class="p-6 pb-0">
           <DialogTitle class="text-left text-3xl font-bold">Добавить новый рецепт</DialogTitle>
         </DialogHeader>
@@ -82,23 +86,27 @@ const onSubmit = (values: any) => {
                 <FormMessage />
               </FormItem>
               <p class="mt-5 text-lg font-bold">Ингредиенты</p>
-              <div class="flex gap-3 mt-2">
-                <FormItem class="w-full">
-                  <FormLabel class="font-normal">Название</FormLabel>
-                  <FormControl>
-                    <Input type="text" placeholder="Бекон" v-bind="ingredientName" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-                <FormItem class="w-full">
-                  <FormLabel class="font-normal">Количество</FormLabel>
-                  <FormControl>
-                    <Input type="text" placeholder="1 пачка" v-bind="amountOfIngredients" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+              <div class="flex gap-3 mt-2 text-sm">
+                <p class="w-1/2">Название</p>
+                <p class="w-1/2">Количество</p>
               </div>
-              <Button class="mt-2 bg-teal-700 hover:bg-teal-900">+</Button>
+              <div class="mt-2 flex flex-col gap-2">
+                <div class="flex gap-3" v-for="item in amountOfOwnRecipeIngredients" :key="item">
+                  <FormItem class="w-full">
+                    <FormControl>
+                      <Input type="text" placeholder="Бекон" v-bind="ingredientName" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                  <FormItem class="w-full">
+                    <FormControl>
+                      <Input type="text" placeholder="1 пачка" v-bind="amountOfIngredients" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                </div>
+              </div>
+              <Button class="mt-2 bg-amber-500 hover:bg-amber-900" @click="onClickPlus">+</Button>
               <div class="mt-5 flex flex-col gap-2">
                 <Label for="message" class="text-lg font-bold">Процесс приготовления</Label>
                 <Textarea
@@ -135,7 +143,7 @@ const onSubmit = (values: any) => {
           </form>
         </div>
         <DialogFooter class="p-6 pt-0">
-          <Button type="submit" form="dialogForm"> Save changes </Button>
+          <Button type="submit" form="dialogForm" class="bg-amber-500"> Save changes </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -16,15 +16,15 @@ const prop = defineProps<{
     <p class="mt-0.5 opacity-50">{{ prop.amountOfIngredients }} ingredients</p>
     <div class="mt-4 flex justify-between items-center">
       <div class="flex gap-2">
-        <Clock color="#3e9392" />
+        <Clock color="#f59e0b" />
         <p>{{ prop.timeForPreparing }}</p>
       </div>
       <div class="flex gap-2">
-        <Flame color="#3e9392" />
+        <Flame color="#f59e0b" />
         <p>{{ prop.amountOfCalories }} Kall</p>
       </div>
       <div class="flex gap-2">
-        <ConciergeBell color="#3e9392" />
+        <ConciergeBell color="#f59e0b" />
         <p>{{ prop.amountOfServe }} serve</p>
       </div>
     </div>

@@ -37,7 +37,7 @@ import { ChevronLeft, Heart } from 'lucide-vue-next'
       </section>
       <section class="my-10">
         <h2 class="text-2xl font-semibold">Приготовление</h2>
-        <p class="mt-5 bg-teal-50 py-5 px-6 rounded-3xl">
+        <p class="mt-5 bg-amber-50 py-5 px-6 rounded-3xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at eos fuga illo in modi
           necessitatibus, nulla officiis reprehenderit totam. Accusantium beatae hic laborum quaerat
           rerum tempore veritatis! Deserunt dolorum explicabo, impedit magni modi nesciunt quisquam

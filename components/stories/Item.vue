@@ -7,7 +7,7 @@ const prop = defineProps<{
 </script>
 
 <template>
-  <div class="w-[102px] h-[102px] p-2 bg-teal-700 relative overflow-hidden rounded-xl shadow-md">
+  <div class="w-[102px] h-[102px] p-2 bg-amber-500 relative overflow-hidden rounded-xl shadow-md">
     <img
       :src="prop.img"
       alt="pizza"
