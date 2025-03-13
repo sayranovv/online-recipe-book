@@ -56,7 +56,7 @@ const onClickPlus = () => {
           <Plus class="!h-6 !w-6" />
         </Button>
       </DialogTrigger>
-      <DialogContent class="grid-rows-[auto_minmax(0,1fr)_auto] p-0 h-screen mobile-l:h-[90dvh]">
+      <DialogContent class="grid-rows-[auto_minmax(0,1fr)_auto] h-screen p-0">
         <DialogHeader class="p-6 pb-0">
           <DialogTitle class="text-left text-3xl font-bold">Добавить новый рецепт</DialogTitle>
         </DialogHeader>

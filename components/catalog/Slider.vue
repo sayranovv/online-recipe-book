@@ -12,7 +12,7 @@ import PastaCarbonara from 'assets/img/pasta carbonara.jpg'
 <template>
   <div class="overflow-hidden -mr-7">
     <Carousel
-      class="w-[140%]"
+      class="w-[120%]"
       :opts="{
         align: 'start'
       }"
