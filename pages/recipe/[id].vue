@@ -6,7 +6,6 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const recipeId = route.params.id
 
-// Запрашиваем данные с API, используя id рецепта
 const {
   data: recipe,
   error,
@@ -19,21 +18,21 @@ const {
     <img
       src="@/assets/img/greek%20salad.jpg"
       alt=""
-      class="relative h-[50dvh] w-full object-cover rounded-[55px]"
+      class="relative h-[50dvh] w-full object-cover rounded-2xl"
     />
-    <div class="w-10/12 mx-auto absolute left-1/2 -translate-x-1/2 top-10">
+    <div class="w-11/12 mx-auto absolute left-1/2 -translate-x-1/2 top-8">
       <div class="flex justify-between">
-        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none">
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-xl">
           <ChevronLeft class="!h-8 !w-8" />
         </Button>
-        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none"
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-xl"
           ><Heart class="!h-8 !w-8"
         /></Button>
       </div>
     </div>
-    <div class="sticky top-20 z-10">
+    <div class="sticky top-14 z-10">
       <RecipeInfo
-        class="mx-auto w-10/12 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+        class="mx-auto w-11/12 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
         :recipe-name="recipe.title"
         :amount-of-ingredients="recipe.ingredients.length"
         :time-for-preparing="recipe.cooking_time"
@@ -41,7 +40,7 @@ const {
         :amount-of-serve="recipe.servings"
       />
     </div>
-    <div class="w-10/12 mx-auto mt-24">
+    <div class="mx-auto mt-24">
       <section>
         <h2 class="text-2xl font-semibold">Ингредиенты</h2>
         <IngredientsSlider class="mt-5" :ingredients="recipe.ingredients" />
