@@ -8,15 +8,22 @@ import { Button } from '@/components/ui/button'
   <div class="relative">
     <header class="flex justify-between items-end">
       <div>
-        <p class="opacity-50">Good morning!</p>
-        <h1 class="text-3xl font-semibold">Eldar Sayranov</h1>
+        <p class="opacity-50">Доброе утро!</p>
+        <h1 class="text-3xl font-semibold">Эльдар Сайранов</h1>
       </div>
-      <UserAvatar />
+      <NuxtLink to="profile">
+        <UserAvatar />
+      </NuxtLink>
     </header>
     <main class="mt-7">
       <section class="flex justify-between items-center gap-2 h-11">
         <div class="relative w-full items-center h-full">
-          <Input id="search" type="text" placeholder="Search..." class="pl-10 h-full rounded-lg" />
+          <Input
+            id="search"
+            type="text"
+            placeholder="Поиск рецептов"
+            class="pl-10 h-full rounded-lg"
+          />
           <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
             <Search class="size-6 text-muted-foreground" />
           </span>
@@ -29,7 +36,7 @@ import { Button } from '@/components/ui/button'
         <StoriesSlider />
       </section>
       <section>
-        <h2 class="text-xl font-bold">Recommendation</h2>
+        <h2 class="text-xl font-bold">Рекомендации</h2>
         <CatalogSlider class="mt-3" />
       </section>
       <section class="mt-5 text-center">
