@@ -15,7 +15,7 @@ const prop = defineProps<{
     <div class="mt-3">
       <h3 class="text-lg font-medium">{{ prop.dishName }}</h3>
       <p class="opacity-50 text-sm">
-        {{ prop.dishAmountOfIngredients }} ingredients •
+        {{ prop.dishAmountOfIngredients }} ингредиентов •
         {{ dishTimeForCooking }}
       </p>
     </div>

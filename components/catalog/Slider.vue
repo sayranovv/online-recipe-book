@@ -21,10 +21,10 @@ import PastaCarbonara from 'assets/img/pasta carbonara.jpg'
         <CarouselItem v-for="(_, index) in 5" :key="index" class="basis-1/2">
           <div class="h-full w-[98%]">
             <CatalogItem
-              dish-name="Pasta Carbonara"
+              dish-name="Паста Карбонара"
               :dish-image="PastaCarbonara"
               dish-amount-of-ingredients="6"
-              dish-time-for-cooking="40 min"
+              dish-time-for-cooking="40 мин"
             />
           </div>
         </CarouselItem>

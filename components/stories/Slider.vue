@@ -21,7 +21,7 @@ import LemonsImg from 'assets/img/lemons.png'
       <CarouselContent class="py-5">
         <CarouselItem v-for="(_, index) in 10" :key="index" class="basis-28">
           <div class="h-full">
-            <StoriesItem title="Homemade Pizza" :img="PizzaImg" type="round" />
+            <StoriesItem title="Домашняя пицца" :img="PizzaImg" type="round" />
             <!--            <StoriesItem title="Lemon Fresh" :img="LemonsImg" />-->
           </div>
         </CarouselItem>
