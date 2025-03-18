@@ -8,7 +8,7 @@ import {
   CarouselPrevious
 } from '~/components/ui/carousel'
 import PizzaImg from 'assets/img/pizza.png'
-import LemonsImg from 'assets/img/lemons.png'
+// import LemonsImg from 'assets/img/lemons.png'
 </script>
 
 <template>

@@ -28,7 +28,11 @@ const amountOfOwnRecipeIngredients = ref(3)
 
 const formSchema = toTypedSchema(
   z.object({
-    recipeName: z.string().min(2).max(50)
+    recipeName: z.string().min(2).max(50),
+    preparingProcess: z.string().min(10).max(1024),
+    timeOfPreparing: z.string(),
+    calories: z.number().min(0).max(10000),
+    amountOfServe: z.number().min(0).max(100)
   })
 )
 
@@ -112,7 +116,7 @@ const onClickPlus = () => {
                 <Textarea
                   id="message"
                   placeholder="Опишите процесс приготовления"
-                  v-bing="preparingProcess"
+                  v-bind="preparingProcess"
                 />
               </div>
               <p class="mt-5 font-bold text-lg">Дополнительно</p>
