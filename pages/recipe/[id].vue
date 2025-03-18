@@ -6,11 +6,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const recipeId = route.params.id
 
-const {
-  data: recipe,
-  error,
-  pending
-} = useFetch(`https://a3a068e9218d71bf.mokky.dev/recipes/${recipeId}`)
+const { data: recipe } = useFetch(`https://a3a068e9218d71bf.mokky.dev/recipes/${recipeId}`)
 </script>
 
 <template>
