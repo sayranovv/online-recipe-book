@@ -70,80 +70,90 @@ const onClickPlus = () => {
             @submit="handleSubmit($event, onSubmit)"
             class="flex flex-col justify-between"
           >
-            <FormField
-              v-slot="{
-                recipeName,
-                ingredientName,
-                amountOfIngredients,
-                preparingProcess,
-                timeOfPreparing,
-                calories,
-                amountOfServe
-              }"
-              name="username"
-            >
+            <FormField v-slot="{ componentField }" name="recipeName">
               <FormItem>
                 <FormLabel class="text-lg font-bold">Название</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="Паста Карбонара" v-bind="recipeName" />
+                  <Input type="text" placeholder="Паста Карбонара" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-              <p class="mt-5 text-lg font-bold">Ингредиенты</p>
-              <div class="flex gap-3 mt-2 text-sm">
-                <p class="w-1/2">Название</p>
-                <p class="w-1/2">Количество</p>
-              </div>
-              <div class="mt-2 flex flex-col gap-2">
-                <div class="flex gap-3" v-for="item in amountOfOwnRecipeIngredients" :key="item">
+            </FormField>
+            <div></div>
+            <p class="mt-5 text-lg font-bold">Ингредиенты</p>
+            <div class="flex gap-3 mt-2 text-sm">
+              <p class="w-1/2">Название</p>
+              <p class="w-1/2">Количество</p>
+            </div>
+            <div class="mt-2 flex flex-col gap-2">
+              <div class="flex gap-3" v-for="item in amountOfOwnRecipeIngredients" :key="item">
+                <FormField v-slot="{ componentField }" name="ingredientName">
                   <FormItem class="w-full">
                     <FormControl>
-                      <Input type="text" placeholder="Бекон" v-bind="ingredientName" />
+                      <Input type="text" placeholder="Бекон" v-bind="componentField" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+                </FormField>
+                <FormField v-slot="{ componentField }" name="amountOfIngredients">
                   <FormItem class="w-full">
                     <FormControl>
-                      <Input type="text" placeholder="1 пачка" v-bind="amountOfIngredients" />
+                      <Input type="text" placeholder="1 пачка" v-bind="componentField" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-                </div>
+                </FormField>
               </div>
-              <Button class="mt-2 bg-amber-500 hover:bg-amber-900" @click="onClickPlus">+</Button>
-              <div class="mt-5 flex flex-col gap-2">
-                <Label for="message" class="text-lg font-bold">Процесс приготовления</Label>
-                <Textarea
-                  id="message"
-                  placeholder="Опишите процесс приготовления"
-                  v-bind="preparingProcess"
-                />
-              </div>
-              <p class="mt-5 font-bold text-lg">Дополнительно</p>
-              <div class="w-1/2 mt-2">
+            </div>
+
+            <Button class="mt-2 bg-amber-500 hover:bg-amber-900" @click="onClickPlus">+</Button>
+
+            <FormField v-slot="{ componentField }" name="preparingProcess">
+              <FormItem>
+                <FormLabel class="text-lg font-bold">Процесс приготовления</FormLabel>
+                <FormControl>
+                  <Textarea
+                    id="message"
+                    placeholder="Опишите процесс приготовления"
+                    v-bind="componentField"
+                  />
+                </FormControl>
+              </FormItem>
+            </FormField>
+
+            <p class="mt-5 font-bold text-lg">Дополнительно</p>
+
+            <div class="w-1/2 mt-2">
+              <FormField v-slot="{ componentField }" name="timeOfPreparing">
                 <FormItem>
                   <FormLabel class="font-normal">Время приготовления</FormLabel>
                   <FormControl>
-                    <Input type="text" placeholder="30 минут" v-bind="timeOfPreparing" />
+                    <Input type="text" placeholder="30 минут" v-bind="componentField" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+              </FormField>
+
+              <FormField v-slot="{ componentField }" name="calories">
                 <FormItem>
                   <FormLabel class="font-normal">Калорийность</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="234" v-bind="calories" />
+                    <Input type="number" placeholder="234" v-bind="componentField" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+              </FormField>
+
+              <FormField v-slot="{ componentField }" name="amountOfServe">
                 <FormItem>
                   <FormLabel class="font-normal">Кол-во порций</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="2" v-bind="amountOfServe" />
+                    <Input type="number" placeholder="2" v-bind="componentField" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-              </div>
-            </FormField>
+              </FormField>
+            </div>
           </form>
         </div>
         <DialogFooter class="p-6 pt-0">
