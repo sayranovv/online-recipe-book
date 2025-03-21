@@ -18,10 +18,10 @@ const { data: recipe } = useFetch(`https://a3a068e9218d71bf.mokky.dev/recipes/${
     />
     <div class="w-11/12 mx-auto absolute left-1/2 -translate-x-1/2 top-8">
       <div class="flex justify-between">
-        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-xl">
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-full">
           <ChevronLeft class="!h-8 !w-8" />
         </Button>
-        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-xl"
+        <Button class="bg-opacity-20 backdrop-blur-sm w-14 h-14 shadow-none rounded-full"
           ><Heart class="!h-8 !w-8"
         /></Button>
       </div>

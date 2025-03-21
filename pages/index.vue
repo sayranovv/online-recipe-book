@@ -22,13 +22,13 @@ import { Button } from '@/components/ui/button'
             id="search"
             type="text"
             placeholder="Поиск рецептов"
-            class="pl-10 h-full rounded-lg"
+            class="pl-10 h-full rounded-3xl"
           />
           <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
             <Search class="size-6 text-muted-foreground" />
           </span>
         </div>
-        <Button class="bg-amber-500 h-full w-16 rounded-lg">
+        <Button class="bg-amber-500 h-full w-16 rounded-3xl">
           <SlidersHorizontal class="!h-6 !w-6" />
         </Button>
       </section>

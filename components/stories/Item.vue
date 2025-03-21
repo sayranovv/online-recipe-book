@@ -8,7 +8,7 @@ const prop = defineProps<{
 
 <template>
   <div
-    class="w-[102px] h-[102px] p-2 bg-amber-500 relative overflow-hidden rounded-xl shadow-md cursor-pointer"
+    class="w-[102px] h-[102px] p-2 bg-amber-500 relative overflow-hidden rounded-3xl shadow-md cursor-pointer"
   >
     <img
       :src="prop.img"

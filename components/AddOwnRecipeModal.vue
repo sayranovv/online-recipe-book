@@ -56,7 +56,7 @@ const onClickPlus = () => {
   <Form v-slot="{ handleSubmit }" as="" keep-values :validation-schema="formSchema">
     <Dialog>
       <DialogTrigger as-child>
-        <Button class="bg-amber-500 h-full rounded-lg w-24">
+        <Button class="bg-amber-500 h-full rounded-3xl w-24 shadow-lg">
           <Plus class="!h-6 !w-6" />
         </Button>
       </DialogTrigger>
@@ -74,7 +74,12 @@ const onClickPlus = () => {
               <FormItem>
                 <FormLabel class="text-lg font-bold">Название</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="Паста Карбонара" v-bind="componentField" />
+                  <Input
+                    class="rounded-3xl"
+                    type="text"
+                    placeholder="Паста Карбонара"
+                    v-bind="componentField"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -90,7 +95,12 @@ const onClickPlus = () => {
                 <FormField v-slot="{ componentField }" name="ingredientName">
                   <FormItem class="w-full">
                     <FormControl>
-                      <Input type="text" placeholder="Бекон" v-bind="componentField" />
+                      <Input
+                        class="rounded-3xl"
+                        type="text"
+                        placeholder="Бекон"
+                        v-bind="componentField"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -98,7 +108,12 @@ const onClickPlus = () => {
                 <FormField v-slot="{ componentField }" name="amountOfIngredients">
                   <FormItem class="w-full">
                     <FormControl>
-                      <Input type="text" placeholder="1 пачка" v-bind="componentField" />
+                      <Input
+                        class="rounded-3xl"
+                        type="text"
+                        placeholder="1 пачка"
+                        v-bind="componentField"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -106,13 +121,16 @@ const onClickPlus = () => {
               </div>
             </div>
 
-            <Button class="mt-2 bg-amber-500 hover:bg-amber-900" @click="onClickPlus">+</Button>
+            <Button class="mt-2 bg-amber-500 hover:bg-amber-900 rounded-3xl" @click="onClickPlus"
+              >+</Button
+            >
 
             <FormField v-slot="{ componentField }" name="preparingProcess">
               <FormItem>
                 <FormLabel class="text-lg font-bold">Процесс приготовления</FormLabel>
                 <FormControl>
                   <Textarea
+                    class="rounded-3xl"
                     id="message"
                     placeholder="Опишите процесс приготовления"
                     v-bind="componentField"
@@ -128,7 +146,12 @@ const onClickPlus = () => {
                 <FormItem>
                   <FormLabel class="font-normal">Время приготовления</FormLabel>
                   <FormControl>
-                    <Input type="text" placeholder="30 минут" v-bind="componentField" />
+                    <Input
+                      class="rounded-3xl"
+                      type="text"
+                      placeholder="30 минут"
+                      v-bind="componentField"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -138,7 +161,12 @@ const onClickPlus = () => {
                 <FormItem>
                   <FormLabel class="font-normal">Калорийность</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="234" v-bind="componentField" />
+                    <Input
+                      class="rounded-3xl"
+                      type="number"
+                      placeholder="234"
+                      v-bind="componentField"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -148,7 +176,12 @@ const onClickPlus = () => {
                 <FormItem>
                   <FormLabel class="font-normal">Кол-во порций</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="2" v-bind="componentField" />
+                    <Input
+                      class="rounded-3xl"
+                      type="number"
+                      placeholder="2"
+                      v-bind="componentField"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -157,7 +190,9 @@ const onClickPlus = () => {
           </form>
         </div>
         <DialogFooter class="p-6 pt-0">
-          <Button type="submit" form="dialogForm" class="bg-amber-500"> Save changes </Button>
+          <Button type="submit" form="dialogForm" class="bg-amber-500 rounded-3xl">
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

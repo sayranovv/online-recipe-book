@@ -26,14 +26,14 @@ const userData = {
       <main class="my-10 space-y-3">
         <NuxtLink
           to="/favorite"
-          class="px-4 py-3 rounded-lg border border-rose-500 flex items-center gap-3 bg-rose-50 hover:bg-rose-100"
+          class="px-4 py-3 rounded-3xl border border-rose-500 flex items-center gap-3 bg-rose-50 hover:bg-rose-100"
         >
           <Heart class="!h-7 !w-7 text-rose-400" />
           <p class="text-rose-950">Понравившиеся</p>
         </NuxtLink>
         <NuxtLink
           to="/my"
-          class="px-4 py-3 rounded-lg border border-amber-500 flex items-center gap-3 bg-orange-50 hover:bg-orange-100"
+          class="px-4 py-3 rounded-3xl border border-amber-500 flex items-center gap-3 bg-orange-50 hover:bg-orange-100"
         >
           <CookingPot class="!h-7 !w-7 text-amber-500" />
           <p class="text-amber-950">Мои рецепты</p>

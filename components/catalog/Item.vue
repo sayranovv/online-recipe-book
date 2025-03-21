@@ -10,7 +10,7 @@ const prop = defineProps<{
 <template>
   <div class="h-full">
     <div class="">
-      <img :src="prop.dishImage" alt="greek salad" class="rounded-xl object-cover h-full" />
+      <img :src="prop.dishImage" alt="greek salad" class="rounded-3xl object-cover h-full" />
     </div>
     <div class="mt-3">
       <h3 class="text-lg font-medium">{{ prop.dishName }}</h3>
