@@ -19,14 +19,14 @@ import PastaCarbonara from 'assets/img/pasta carbonara.jpg'
     >
       <CarouselContent>
         <CarouselItem v-for="(_, index) in 5" :key="index" class="basis-1/2">
-          <div class="h-full w-[98%]">
+          <NuxtLink to="/recipe/1" class="h-full w-[98%]">
             <CatalogItem
               dish-name="Паста Карбонара"
               :dish-image="PastaCarbonara"
               dish-amount-of-ingredients="6"
               dish-time-for-cooking="40 мин"
             />
-          </div>
+          </NuxtLink>
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious />

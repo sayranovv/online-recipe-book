@@ -41,7 +41,11 @@ const userData = {
       </main>
     </div>
     <footer class="text-center">
-      <NuxtLink to="/login" class="text-rose-700 font-regular mt-auto">Выйти из аккаунта</NuxtLink>
+      <NuxtLink
+        to="/login"
+        class="text-rose-700 font-regular mt-auto hover:border-b hover:border-b-rose-600"
+        >Выйти из аккаунта</NuxtLink
+      >
     </footer>
   </div>
 </template>
